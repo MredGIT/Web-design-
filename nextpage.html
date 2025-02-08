@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More About APEX Fitness+</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-purple-900 text-white p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">APEX FITNESS+</h1>
+        <ul class="flex space-x-6">
+            <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+            <li><a href="#" class="hover:text-gray-300">Programs</a></li>
+            <li><a href="#" class="hover:text-gray-300">Testimonials</a></li>
+            <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+        </ul>
+        <button class="bg-pink-500 px-4 py-2 rounded-full hover:bg-pink-600 transition">Join Now</button>
+    </nav>
+    
+    
+    <!-- More Info Section -->
+    <section class="p-12 text-center bg-white">
+        <h2 class="text-3xl font-bold">Discover More About APEX FITNESS+</h2>
+        <p class="mt-4 max-w-2xl mx-auto">Explore our diverse training programs, expert coaching, and top-notch facilities. Our goal is to help you achieve peak fitness in a motivating environment.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div class="bg-gray-200 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold">Personal Training</h3>
+                <p class="mt-2">One-on-one sessions with professional trainers to tailor workouts to your needs.</p>
+            </div>
+            <div class="bg-gray-200 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold">Group Classes</h3>
+                <p class="mt-2">Join energetic classes like yoga, HIIT, and strength training.</p>
+            </div>
+            <div class="bg-gray-200 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold">Nutritional Guidance</h3>
+                <p class="mt-2">Learn the best eating habits to complement your fitness journey.</p>
+            </div>
+        </div>
+    </section>
+    <section class="p-12 text-center bg-gray-100" x-data="{ weight: '', height: '', bmi: null, calculate() { this.bmi = (this.weight / ((this.height / 100) ** 2)).toFixed(2) } }">
+        <h2 class="text-3xl font-bold">Calculate Your BMI</h2>
+        <div class="mt-6 max-w-md mx-auto">
+            <input type="number" placeholder="Weight (kg)" class="w-full p-3 rounded border mb-4" x-model="weight">
+            <input type="number" placeholder="Height (cm)" class="w-full p-3 rounded border mb-4" x-model="height">
+            <button @click="calculate" class="bg-pink-500 px-6 py-3 rounded-full hover:bg-pink-600 transition">Calculate</button>
+            <p class="mt-4 text-xl font-bold" x-show="bmi">Your BMI: <span x-text="bmi"></span></p>
+        </div>
+    </section>
+
+
+   
+    <div class="mt-8 bg-white text-gray-900 p-6 rounded-lg shadow-md max-w-md mx-auto">
+        <h3 class="text-xl font-bold">Workout Timer</h3>
+        <p id="timer" class="text-2xl mt-2">00:00</p>
+        <button onclick="startTimer()" class="bg-green-500 px-4 py-2 rounded mt-3 hover:bg-green-600">Start</button>
+        <button onclick="resetTimer()" class="bg-red-500 px-4 py-2 rounded mt-3 hover:bg-red-600">Reset</button>
+    </div>
+
+    <div>
+        ggg
+    </div>
+    
+    <!-- Call to Action -->
+    <section class="p-12 text-center bg-purple-800 text-white">
+        <h2 class="text-3xl font-bold">Start Your Journey Today!</h2>
+        <p class="mt-4">Sign up now and take the first step toward a healthier lifestyle.</p>
+        <button class="mt-6 bg-pink-500 px-6 py-3 rounded-full hover:bg-pink-600 transition">Get Started</button>
+    </section>
+</body>
+</html>
