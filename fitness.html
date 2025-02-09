@@ -3,40 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="APEX FITNESS provides a world-class fitness experience with personalized plans, a variety of workouts, and access to over 5,000 gyms.">
     <title>APEX FITNESS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
 <body class="bg-gray-100">
     <!-- Navbar -->
     <nav class="bg-purple-900 text-white p-4 flex justify-between items-center">
         <h1 class="text-2xl font-bold">APEX FITNESS+</h1>
         <ul class="flex space-x-6">
-            <a href="https://youtu.be/3PMrt-1WDaI?si=pLjaX7gk8giyBqPJ"><button class="mt-6 bg-red-500 px-9 py-3 rounded-full">TRAINING VIDEO</button></a>
+            <li><a href="https://youtu.be/3PMrt-1WDaI?si=pLjaX7gk8giyBqPJ"><button class="mt-6 bg-red-500 px-9 py-3 rounded-full">TRAINING VIDEO</button></a></li>
         </ul>
-       <button class="bg-pink- px-4 py-2 rounded-full">Try Us Free</button>
+        <div class="flex items-center space-x-4">
+            <button class="bg-pink-500 px-4 py-2 rounded-full hover:bg-pink-600 transition">Try Us Free</button>
+        </div>
     </nav>
-    
+
     <!-- Hero Section -->
     <section class="flex items-center justify-between p-12 bg-gradient-to-r from-purple-800 to-blue-600 text-white">
         <div>
             <h2 class="text-4xl font-bold">ANYTIME, ANYWHERE.<br>AND NOW WITH FITNESS+.</h2>
             <p class="mt-4">APEX TEAM FROM AFRICA NAZARENE UNIVERSITY.</p>
-            <a href="nextpage.html"><button class="mt-6 bg-red-500 px-9 py-3 rounded-full">About Apex Fitness</button></a>
+            <a href="MORE ON APEX FITNESS.html"><button class="mt-6 bg-red-500 px-9 py-3 rounded-full">More On Apex Fitness</button></a>
         </div>
-        <img src="pexels-photo-14013675.webp" width="850px" height="200px" alt="Gym Image" class="rounded-lg shadow-lg">
+        <img src="pexels-photo-14013675.webp" alt="Person working out in a gym" class="rounded-lg shadow-lg transform hover:scale-105 hover:opacity-80 transition duration-500">
     </section>
-    <video controls src="3195943-uhd_3840_2160_25fps.mp4" width=""></video>
-   <!-- Interactive BMI Calculator -->
-   <section class="p-12 text-center bg-gray-100" x-data="{ weight: '', height: '', bmi: null, calculate() { this.bmi = (this.weight / ((this.height / 100) ** 2)).toFixed(2) } }">
-    <h2 class="text-3xl font-bold">Calculate Your BMI</h2>
-    <div class="mt-6 max-w-md mx-auto">
-        <input type="number" placeholder="Weight (kg)" class="w-full p-3 rounded border mb-4" x-model="weight">
-        <input type="number" placeholder="Height (cm)" class="w-full p-3 rounded border mb-4" x-model="height">
-        <button @click="calculate" class="bg-pink-500 px-6 py-3 rounded-full hover:bg-pink-600 transition">Calculate</button>
-        <p class="mt-4 text-xl font-bold" x-show="bmi">Your BMI: <span x-text="bmi"></span></p>
-    </div>
-</section>
-    
+
+
+<!-- video -->
+    <section class="relative">
+        <video autoplay muted loop class="w-full h-full object-cover absolute inset-0 z-0"> w
+            <source src="3195943-uhd_3840_2160_25fps.mp4  " type="video/mp4" >
+        </video>
+        <div class="relative z-10 text-white p-12 text-center">
+            <h2 class="text-4xl font-bold">ANYTIME, ANYWHERE. AND NOW WITH FITNESS+.</h2>
+            <p class="mt-4">APEX TEAM FROM AFRICA NAZARENE UNIVERSITY.</p>
+            <a href="MORE ON APEX FITNESS.html"><button class="mt-6 bg-red-500 px-9 py-3 rounded-full">More on Apex Fitness</button></a>
+        </div>
+    </section>
+
+    <!-- Interactive BMI Calculator -->
+    <section class="p-12 text-center bg-gray-100" x-data="{ weight: '', height: '', bmi: null, calculate() { this.bmi = (this.weight / ((this.height / 100) ** 2)).toFixed(2) } }">
+        <h2 class="text-3xl font-bold">Calculate Your BMI</h2>
+        <div class="mt-6 max-w-md mx-auto">
+            <input type="number" placeholder="Weight (kg)" class="w-full p-3 rounded border mb-4" x-model="weight">
+            <input type="number" placeholder="Height (cm)" class="w-full p-3 rounded border mb-4" x-model="height">
+            <button @click="calculate" class="bg-pink-500 px-6 py-3 rounded-full hover:bg-pink-600 transition">Calculate</button>
+            <p class="mt-4 text-xl font-bold" x-show="bmi">Your BMI: <span x-text="bmi"></span></p>
+        </div>
+    </section>
+
+
+    <section class="p-12 text-center bg-white">
+        <h2 class="text-3xl font-bold">Follow Us on Instagram</h2>
+        <div class="mt-4 grid grid-cols-3 gap-4">
+            <!-- Example posts from Instagram -->
+            <img src="instagram-image1.jpg" class="w-full h-64 object-cover rounded-lg shadow-md">
+            <img src="instagram-image2.jpg" class="w-full h-64 object-cover rounded-lg shadow-md">
+            <img src="instagram-image3.jpg" class="w-full h-64 object-cover rounded-lg shadow-md">
+        </div>
+    </section>
+
+
+    <section class="p-12 text-center bg-gray-100">
+        <h2 class="text-3xl font-bold">User Reviews</h2>
+        <div class="mt-6 max-w-3xl mx-auto">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold">John Doe</h3>
+                <p class="text-yellow-500">⭐⭐⭐⭐⭐</p>
+                <p>"The personal training sessions here are fantastic. The trainers are experienced and push me to reach my goals!"</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Benefits Section -->
     <section class="p-12 text-center bg-white">
         <h2 class="text-3xl font-bold">FIND A GYM WITH ALL THE RIGHT BENEFITS</h2>
